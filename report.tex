@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+
+\usepackage{fullpage}
+\usepackage{multicol,multirow}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage[table]{xcolor}
+\usepackage{array}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+\definecolor{lightcorn}{RGB}{228,160,16}
+
+\usepackage{tikz}  
+\usetikzlibrary{graphs}
+
+\usepackage{hyperref}
+%\usepackage[usenames,dvipsnames,svgnames,table,rgb]{xcolor}
+\hypersetup{				% Гиперссылки
+	%	unicode=true,           % русские буквы в раздела PDF
+	%	pdftitle={Заголовок},   % Заголовок
+	%	pdfauthor={Автор},      % Автор
+	%	pdfsubject={Тема},      % Тема
+	%	pdfcreator={Создатель}, % Создатель
+	%	pdfproducer={Производитель}, % Производитель
+	%	pdfkeywords={keyword1} {key2} {key3}, % Ключевые слова
+	colorlinks=true,       	% false: ссылки в рамках; true: цветные ссылки
+	linkcolor=lightcorn,          % внутренние ссылки
+	%	citecolor=green,        % на библиографию
+	%	filecolor=magenta,      % на файлы
+	urlcolor=blue           % на URL
+}
+
+\definecolor{lightgray}{gray}{0.9}
+\usepackage{minted}
+
+
+\setminted[]{
+	breaklines=true,
+	tabsize=2,
+	mathescape,
+	frame=lines,
+	framesep=2mm,
+	bgcolor=lightgray,
+	fontsize=\footnotesize,
+	baselinestretch=1.1,
+	numbers=left,
+	linenos
+}
+
+
+
+\usepackage{titlesec}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection.}{0.3em}{}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection.}{0.3em}{}
+
+\titlespacing{\section}{0pt}{*2}{*2}
+\titlespacing{\subsection}{0pt}{*1}{*1}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\usepackage{listings}
+\lstloadlanguages{Lisp}
+\lstset{extendedchars=false,
+	breaklines=true,
+	breakatwhitespace=true,
+	keepspaces = true,
+	tabsize=2
+}
+\begin{document}
+
+\begin{center}
+	\Large{\textbf{Отчет по лабораторной работе \textnumero 0 
+		по курсу \\ \guillemotleft Искусственный Интелект\guillemotright}}
+	
+\end{center}
+\begin{flushright}
+
+Студент группы 8О-306 МАИ \textit{Недосеков Иван}, \textnumero 18 по списку \\
+\makebox[7cm]{Контакты: {\tt ivan-nedd@mail.ru} \hfill} \\
+\makebox[7cm]{Работа выполнена: \today \hfill} \\
+\ \\
+\makebox[7cm]{Преподаватель: Самиров А. \hfill} \\
+\makebox[7cm]{Отчет сдан: \hfill} \\
+\makebox[7cm]{Итоговая оценка: \hfill} \\
+\makebox[7cm]{Подпись преподавателя: \hfill} \\
+
+\end{flushright}
+
+\section{Тема работы}
+Обработка данных
+
+\section{Цель работы}
+В данной лабораторной работе, вы выступаете в роли предприимчивого начинающего стартапера в области машинного обучения. Вы заинтересовались этим направлением и хотите предложить миру что-то новое и при этом неплохо заработать. От вас требуется определить задачу которую вы хотите решить и найти под нее соответствующие данные. Так как вы не очень богаты, вам предстоит руками проанализировать данные, визуализировать зависимости, построить новые признаки и сказать хватит ли вам этих данных, и если не хватит найти еще. Вы готовитесь представить отчет ваши партнерам и спонсорам, от которых зависит дальнейшая ваша судьба. Поэтому тщательно работайте:) И главное, день промедления и вас опередит ваш конкурент, да и сплагиаченная работа отразится на репутации
+
+
+\section{Ход решения}
+
+Все началось с нахождения датасета на kaggle.
+
+Идея выяснить курит ли человек по его медицинским показателям показалась мне интересной. 
+
+После скачивания и установки необходимых библиотек, приступил к обработке данных. 
+Привел категориальные признаки к числовому значению, убрал столбцы не дающие информацию об цели изучения.
+Приступил к анализу данных, оказалось что в данных много шумов и есть сильно скоррелированные данные, все это предстояло вычистить из датасета.
+В итоге получился не очень сбаланнсированный в плане целевыз признаков датасет.
+
+\section{Выводы}
+В данной лабораторной работе я научился обрабатывать и анализировать данные датасета. Библиотека pandas сильно в этом помогает, правда большинство конструкций не очевидно с ходу. 
+\end{document}
